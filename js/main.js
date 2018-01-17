@@ -43,7 +43,7 @@ function submit(maxAnswers, requiresCheat) {
     while (number < maxAnswers) {
         number++;
         var answer = document.getElementById("answer" + number.toString()).value;
-        if (answer.trim() === getAnswer(number, false)) {
+        if (answer.trim().toLowerCase() === getAnswer(number, false).toLowerCase()) {
             document.getElementById("result" + number.toString()).innerText = "Correct";
             document.getElementById("result" + number.toString()).style.color = "green";
             correct++;
