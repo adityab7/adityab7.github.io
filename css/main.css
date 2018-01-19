@@ -30,6 +30,50 @@ h2 {
     align: right;
 }
 
+#humanities {
+    background-color: #008CBA;
+    border-radius: 4px;
+    padding: 32px 16px;
+    color: white;
+    display: inline-block;
+    width: 25%;
+    text-decoration: none;
+}
+
+#science {
+    background-color: #f44336;
+    border-radius: 4px;
+    padding: 32px 16px;
+    color: white;
+    display: inline-block;
+    width: 25%;
+    text-decoration: none;
+}
+
+#results {
+    background-color: #4CAF50;
+    border-radius: 4px;
+    padding: 32px 32px;
+    color: white;
+    display: inline-block;
+    width: 50%;
+    text-decoration: none;
+    margin-top: 5px;
+}
+
+#clear {
+    background-color: #f44336; /* Red */
+    border: none;
+    color: white;
+    border-radius: 6px;
+    margin-bottom: 6px;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    display: inline-block;
+}
+
 .multiple-choice {
     background-color: #e7e7e7; /* Black */
     border: none;
@@ -49,6 +93,17 @@ h2 {
     text-align: center;
     text-decoration: none;
     font-size: 16px;
+    display: block;
+}
+
+#results-banner {
+    background-color: #4CAF50; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 1em;
     display: block;
 }
 

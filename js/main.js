@@ -7,8 +7,24 @@ var correct = 0;
 var total = 0;
 var page = "0";
 
-if (document.getElementById("title").innerText !== "Charter of Rights and Freedoms") {
-    setProgress();
+function clearResultHistory() {
+    localStorage.clear();
+    document.getElementById("history").innerText = "No results were found. (you might have cleared browser history)";
+}
+
+function displayResults() {
+    var results = localStorage.getItem("results");
+    if (results === null) {
+        document.getElementById("history").innerText = "No results were found. (you might have cleared browser history)";
+    } else {
+        var list = results.split(",");
+        var string = "";
+        for (var n = 0; n < list.length; n++) {
+            var test = list[n];
+            string = string + test + "\n";
+        }
+        document.getElementById("history").innerText = string;
+    }
 }
 
 function resetScore() {
@@ -27,6 +43,15 @@ function setProgress(currentPage) {
     document.getElementById("progress").innerText = "Score: " + correct + "/" + total + " (" + percentValue + "%) | Progress: page " + page + "/7";
     if (page === "99") {
         document.getElementById("progress").innerText = "Score: " + correct + "/" + total + " (" + percentValue + "%)";
+        var date = new Date();
+        var storeString = "Humanities | Charter of Rights and Freedoms |" + correct + "/" + total + " | " + percentValue + "%" + " | " + date.getFullYear() + "-" + (date.getMonth() + 1) + "-" + date.getDate();
+        if (localStorage.getItem("results") !== null) {
+            var results = localStorage.getItem("results");
+            results = results + "," + storeString;
+            localStorage.setItem("results", results);
+        } else {
+            localStorage.setItem("results", storeString);
+        }
     }
 }
 
@@ -42,8 +67,8 @@ function submit(maxAnswers, requiresCheat) {
     var number = 0;
     while (number < maxAnswers) {
         number++;
-        var answer = document.getElementById("answer" + number.toString()).value;
-        if (answer.trim().toLowerCase() === getAnswer(number, false).toLowerCase()) {
+        var answer = document.getElementById("answer" + number.toString()).value.toLowerCase();
+        if (answer.trim() === getAnswer(number, false)) {
             document.getElementById("result" + number.toString()).innerText = "Correct";
             document.getElementById("result" + number.toString()).style.color = "green";
             correct++;
@@ -96,9 +121,9 @@ function getAnswer(number, isCheat) {
         }
     }
     if (document.getElementById("section").innerText === "Democratic Rights") {
-        var answer = document.getElementById("answer" + number.toString()).value.trim();
+        var answer = document.getElementById("answer" + number.toString()).value.trim().toLowerCase();
         if (number === 1) {
-            return "House of Commons and Provincial Legislature";
+            return "house of commons and provincial legislature";
         }
         if (number === 2) {
             if (answer.toLowerCase() === "five") {

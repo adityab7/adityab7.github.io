@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title id="title">Subjects</title>
+    <title id="title">Charter of Rights and Freedoms</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -25,19 +25,14 @@
 
 <div align="center">
     <img src="img/canadaball.png" alt="Canadaball" height="10%" width="10%"><br>
-    <a href="humanities.html" id="humanities">
-        <h2>Humanities</h2>
-        <img src="img/coat_of_arms.png" alt="Coat of Arms" height="216px" width="384px"><br>
-    </a>
-    <a href="" id="science">
-        <h2>Science</h2>
-        <img src="img/telescope.png" alt="Charter" height="216px" width="384px"><br>
-    </a>
-    <br>
-    <a href="results.html" id="results">
-        <h2>Result History</h2>
-    </a>
+
+    <h2>Result History</h2>
+    <p id="history"></p>
+    <button onclick="clearResultHistory()" id="clear">Clear History</button>
+    <a id="back" href="index.html">Back to subjects</a>
 </div>
+
+<script> displayResults() </script>
 
 </body>
 </html>
