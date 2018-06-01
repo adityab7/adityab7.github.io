@@ -1,0 +1,71 @@
+html {
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    color: black;
+}
+
+h1 {
+    font-family: 'Share Tech', sans-serif;
+}
+
+button {
+    border-radius: 16px;
+    padding: 24px 16px;
+    color: white;
+    display: inline-block;
+    height: 25%;
+    width: 25%;
+    margin: 25px;
+    text-align: center;
+    border: none;
+}
+
+p {
+    font-size: large;
+}
+
+footer {
+    text-align: right;
+    margin-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-top: 1px solid black;
+}
+
+.cursive {
+    font-family: 'Dancing Script', cursive;
+}
+
+.difference {
+    background-color: #4CAF50; /* Green */
+}
+
+.case-study {
+    background-color: #008CBA; /* Blue */
+}
+
+.counter-argument {
+    background-color: #f44336; /* Red */
+}
+
+.independence {
+    background-color: #CCCC00;
+}
+
+.bold {
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+}
+
+.contents {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+#independence-button {
+    width: inherit;
+    padding-top: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+
