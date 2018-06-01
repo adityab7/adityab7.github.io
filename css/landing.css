@@ -1,0 +1,43 @@
+html {
+    margin-top: 50px;
+    font-family: 'Roboto', sans-serif;
+    background-color: white;
+    color: black;
+}
+
+h1 {
+    font-family: 'Share Tech', sans-serif;
+}
+
+button {
+    border-radius: 16px;
+    padding: 24px 16px;
+    color: white;
+    display: inline-block;
+    height: 25%;
+    width: 25%;
+    margin: 30px;
+    text-align: center;
+    border: none;
+}
+
+.difference {
+    background-color: #4CAF50; /* Green */
+}
+
+.case-study {
+    background-color: #008CBA; /* Blue */
+}
+
+.counter-argument {
+    background-color: #f44336; /* Red */
+}
+
+.cursive {
+    font-family: 'Tangerine', cursive;
+}
+
+#contents {
+    margin-left: 15%;
+    margin-right: 15%;
+}
