@@ -1,5 +1,4 @@
 html {
-    margin-top: 50px;
     font-family: 'Roboto', sans-serif;
     background-color: white;
     color: black;
@@ -16,9 +15,25 @@ button {
     display: inline-block;
     height: 25%;
     width: 25%;
-    margin: 30px;
+    margin: 25px;
     text-align: center;
     border: none;
+}
+
+p {
+    font-size: large;
+}
+
+footer {
+    text-align: right;
+    margin-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+    border-top: 1px solid black;
+}
+
+.cursive {
+    font-family: 'Dancing Script', cursive;
 }
 
 .difference {
@@ -33,11 +48,21 @@ button {
     background-color: #f44336; /* Red */
 }
 
-.cursive {
-    font-family: 'Tangerine', cursive;
+.bold {
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
 }
 
-#contents {
-    margin-left: 15%;
-    margin-right: 15%;
+.contents {
+    margin-left: 20%;
+    margin-right: 20%;
 }
+
+#independence-button {
+    width: inherit;
+    background-color: #CCCC00;
+    padding-top: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+}
+

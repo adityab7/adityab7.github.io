@@ -5,9 +5,47 @@
     <title id="title">Alberta Independence</title>
     <link rel="stylesheet" href="css/landing.css">
     <link rel="stylesheet" href="css/effect.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto|Share+Tech|Tangerine" rel="stylesheet">
+    <link rel="stylesheet" href="css/navbar.css">
+    <link rel="stylesheet" href="css/modal.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto|Share+Tech|Cinzel|Dancing+Script" rel="stylesheet">
 </head>
+<header>
+    <div class="topnav" id="myTopnav">
+        <a href="#home" class="active">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn"><span class="difference-text">Differences</span>
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Public Opinion</a>
+                <a href="#">Culture</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><span class="case-study-text">Case Studies</span>
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">TransCanada Pipeline</a>
+                <a href="#">Saskatchewan Cars</a>
+                <a href="#">B.C Embargo</a>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn"><span class="counter-argument-text">Counter Arguments</span>
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="#">Canadian Military</a>
+                <a href="#">Economic Isolation</a>
+            </div>
+        </div>
+        <a href="#about" class="independence-button"><span class="independence-text">An Independent Alberta</span></a>
+    </div>
+</header>
+
 <body>
+<script src="js/modal.js"></script>
 <script src="js/landing.js"></script>
 <div class="container">
     <div class="loader">
@@ -25,44 +63,111 @@
         <span></span>
         <span></span>
         <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
     </div>
 </div>
-<div align="center" id="contents">
+<div align="center" class="contents">
     <h1 >Should Alberta become independent from Canada?</h1>
-    <img src="img/alberta-separated.png" alt="Alberta" height="35%" width="35%"><br>
+    <img src="img/alberta-separated.png" alt="Alberta" height="45%" width="45%"><br>
+
+    <br>
+    <p><span class="bold">Citizens of Alberta</span> are slowly growing more discontent with the federal government back in <span class="bold">Ottawa</span>. They believe
+        that the legislators in <span class="bold">Parliament Hill</span> do not have their best interests at heart, and Albertans have numerous reasons
+        to believe this way. The first point always brought up in debates about independence is that Albertan culture widely
+        differs from Canadian culture. <i>Do we really have more in common with a Québécois than an American?</i> This year long
+        inquiry weighs the benefits of staying in the union, and compares it with the reasons to leave. </p>
+</div>
+<div class="container">
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</div>
+<div align="center" class="contents">
+    <button id="independence-button"><h2>How would an independent Alberta look like?</h2></button>
+
     <h3>Below is a list of <span class="difference">differences</span> between Alberta and Canada,
         <span class="case-study">case studies</span> that influence secession, and <span class="counter-argument">counter arguments</span> against independence.</h3>
-    <div class="container">
-        <div class="loader">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+
+    <button class="difference modal-button" onclick="clickedModal('public-opinion-modal')"><h2>Public Opinion</h2></button>
+    <div class="modal" id="public-opinion-modal">
+        <div class="modal-content difference">
+            <span class="close" onclick="clickedModal('public-opinion-modal')">&times;</span>
+            <p>Blah blah blah blah blah public opinion</p>
         </div>
     </div>
-    <button class="difference">
-        <h2>Public Opinion</h2>
-    </button>
-    <button class="difference">
-        <h2>Culture</h2>
-    </button>
+
+    <button class="difference modal-button" onclick="clickedModal('culture-opinion-modal')"><h2>Culture</h2></button>
+    <div class="modal" id="culture-opinion-modal">
+        <div class="modal-content difference">
+            <span class="close" onclick="clickedModal('culture-opinion-modal')">&times;</span>
+            <p>Blah blah blah blah blah culture</p>
+        </div>
+    </div>
+
     <br>
-    <button class="case-study">
-        <h2>TransCanada Pipeline</h2>
-    </button>
-    <button class="case-study">
-        <h2>#FreeTheBeer</h2>
-    </button>
+
+    <button class="case-study modal-button" onclick="clickedModal('transcanada-modal')"><h2>TransCanada Pipeline</h2></button>
+    <div class="modal" id="transcanada-modal">
+        <div class="modal-content case-study">
+            <span class="close" onclick="clickedModal('transcanada-modal')">&times;</span>
+            <p>Blah blah blah blah blah transcanada</p>
+        </div>
+    </div>
+
+    <button class="case-study modal-button" onclick="clickedModal('saskatchewan-modal')"><h2>Saskatchewan Cars</h2></button>
+    <div class="modal" id="saskatchewan-modal">
+        <div class="modal-content case-study">
+            <span class="close" onclick="clickedModal('saskatchewan-modal')">&times;</span>
+            <p>Blah blah blah blah blah saskatchewan cars</p>
+        </div>
+    </div>
+
+    <button class="case-study modal-button" onclick="clickedModal('bc-modal')"><h2>B.C. Embargo</h2></button>
+    <div class="modal" id="bc-modal">
+        <div class="modal-content case-study">
+            <span class="close" onclick="clickedModal('bc-modal')">&times;</span>
+            <p>Blah blah blah blah blah bc embargo</p>
+        </div>
+    </div>
+
+    <br>
+
+    <button class="counter-argument modal-button" onclick="clickedModal('military-modal')"><h2>Canadian Military</h2></button>
+    <div class="modal" id="military-modal">
+        <div class="modal-content counter-argument">
+            <span class="close" onclick="clickedModal('military-modal')">&times;</span>
+            <p>Blah blah blah blah blah canadian military</p>
+        </div>
+    </div>
+
+    <button class="counter-argument modal-button" onclick="clickedModal('isolation-modal')"><h2>Economic Isolation</h2></button>
+    <div class="modal" id="isolation-modal">
+        <div class="modal-content counter-argument">
+            <span class="close" onclick="clickedModal('isolation-modal')">&times;</span>
+            <p>Blah blah blah blah blah economic isolation</p>
+        </div>
+    </div>
 </div>
 </body>
+<footer>
+    <p class="bold">Aditya Bandekar #72169003</p>
+</footer>
 </html>
